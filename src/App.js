@@ -4,7 +4,15 @@ import Header from './MyComponents/Header';
 import { Todos } from './MyComponents/Todos';   //Used second bracket bcz my functions are not default
 import { Footer } from './MyComponents/Footer';
 
+
 function App() {
+const onDelete= (todo) => {
+  console.log("I am ondelte of todo", todo)
+  let index = todos.indexOf(todo);
+  todos.splice(index, 1);
+}
+
+
   let todos = [
     {
         sno: 1,
@@ -25,7 +33,7 @@ function App() {
   return (
     <>
       <Header title="My Todo List" searchBar={false} />
-      <Todos todos = {todos}/>
+      <Todos todos = {todos} onDelete = {onDelete}/>
       <Footer />
     </>
   );
