@@ -2,8 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './MyComponents/Header';
 import { Todos } from './MyComponents/Todos';   //Used second bracket bcz my functions are not default
+import { AddTodo } from "./MyComponents/AddTodo";
 import { Footer } from './MyComponents/Footer';
-import React, { useState } from 'react';   
+import React, { useState } from 'react';  
+ 
 
 function App() {
 const onDelete= (todo) => {
@@ -38,6 +40,7 @@ const onDelete= (todo) => {
   return (
     <>
       <Header title="My Todo List" searchBar={false} />
+      <AddTodo/>
       <Todos todos = {todos} onDelete = {onDelete}/>
       <Footer />
     </>
