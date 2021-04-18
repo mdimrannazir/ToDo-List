@@ -16,7 +16,8 @@ const onDelete= (todo) => {
 
   setTodos(todos.filter((e)=>{
     return e!==todo;
-  }))
+  }));
+  // localStorage.setItem("todos",json.stringify(todos));
 }
 
   const addTodo = (title, desc)=>{
@@ -35,25 +36,17 @@ const onDelete= (todo) => {
     }
     setTodos([...todos, myTodo]);
     console.log(myTodo);
-  }
 
-  const [todos, setTodos] = useState([
-    {
-        sno: 1,
-        title: "Go to market",
-        desc: "You need to go to the market to get this job done"
-    },
-    {
-        sno: 2,
-        title: "Go to mall",
-        desc: "You need to go to the market to get this job done"
-    },
-    {
-        sno: 3,
-        title: "Go to ghat",
-        desc: "You need to go to the market to get this job done"
-    },
-])
+  
+    // localStorage.setItem("todos",json.stringify(todos));
+  
+
+  const [todos, setTodos] = useState([])
+  
+  
+  
+  
+  
   return (
     <>
       <Header title="My Todo List" searchBar={false} />
