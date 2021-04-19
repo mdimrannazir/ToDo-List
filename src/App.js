@@ -17,11 +17,11 @@ const onDelete= (todo) => {
   setTodos(todos.filter((e)=>{
     return e!==todo;
   }));
-  // localStorage.setItem("todos",json.stringify(todos));
+  localStorage.setItem("todos",JSON.stringify(todos));
 }
 
   const addTodo = (title, desc)=>{
-    console.log("I'm adding this todo",title, desc)
+    console.log("I'm adding this todo", title, desc)
     let sno;
     if(todos.length==0){
      sno = 0;
@@ -38,9 +38,9 @@ const onDelete= (todo) => {
     console.log(myTodo);
 
   
-    // localStorage.setItem("todos",json.stringify(todos));
+    localStorage.setItem("todos",JSON.stringify(todos));
+  }
   
-
   const [todos, setTodos] = useState([])
   
   
